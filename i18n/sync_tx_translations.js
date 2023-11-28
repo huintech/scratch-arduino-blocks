@@ -18,7 +18,7 @@
 if (!process.env.TX_TOKEN || process.argv.length !== 2) {
   process.stdout.write(usage);
   process.exit(1);
-};
+}
 
 const fs = require('fs');
 const path = require('path');
@@ -28,7 +28,7 @@ const locales = require('scratch-arduino-l10n').default;
 
 // Globals
 const PATH_OUTPUT = path.resolve(__dirname, '../msg');
-const PROJECT = 'scratch-arduino-editor'
+const PROJECT = 'scratch-editor'
 const RESOURCE = 'blocks';
 const MODE = {mode: 'reviewed'};
 
