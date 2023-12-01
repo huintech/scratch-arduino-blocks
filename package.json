@@ -1,6 +1,6 @@
 {
-  "name": "scratch-arduino-blocks",
-  "version": "0.1.11",
+  "name": "@huintech/scratch-arduino-blocks",
+  "version": "0.8.2",
   "description": "Scratch-HW Blocks is a library for building creative computing interfaces.",
   "author": "Massachusetts Institute of Technology",
   "license": "Apache-2.0",
@@ -9,6 +9,9 @@
     "type": "git",
     "url": "https://github.com/huintech/scratch-arduino-blocks.git",
     "sha": "$(git log -n1 --pretty=format:%H)"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "main": "./dist/vertical.js",
   "browser": "./shim/vertical.js",
@@ -28,7 +31,8 @@
   },
   "dependencies": {
     "exports-loader": "0.6.3",
-    "imports-loader": "0.6.5"
+    "imports-loader": "0.6.5",
+    "@huintech/coconut-scratch-l10n": "0.8.0"
   },
   "devDependencies": {
     "async": "2.6.0",
@@ -43,7 +47,6 @@
     "graceful-fs": "4.1.11",
     "json": "9.0.4",
     "rimraf": "2.6.2",
-    "scratch-arduino-l10n": "latest",
     "selenium-webdriver": "^4.0.0-alpha.1",
     "transifex": "1.6.6",
     "travis-after-all": "1.4.4",
