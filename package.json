@@ -1,6 +1,6 @@
 {
   "name": "@huintech/scratch-arduino-blocks",
-  "version": "0.8.4",
+  "version": "0.8.5",
   "description": "Scratch-HW Blocks is a library for building creative computing interfaces.",
   "author": "Massachusetts Institute of Technology",
   "license": "Apache-2.0",
