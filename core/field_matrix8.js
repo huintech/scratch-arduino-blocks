@@ -128,8 +128,6 @@ goog.inherits(Blockly.FieldMatrix8, Blockly.Field);
  * @nocollapse
  */
 Blockly.FieldMatrix8.fromJson = function(options) {
-  // TODO: 추후 삭제
-  console.log(options);
   return new Blockly.FieldMatrix8(options['matrix']);
 };
 
@@ -166,14 +164,14 @@ Blockly.FieldMatrix8.ARROW_SIZE = 12;
  * @type {number}
  * @const
  */
-Blockly.FieldMatrix8.MATRIX_NODE_SIZE = 10;
+Blockly.FieldMatrix8.MATRIX_NODE_SIZE = 18;
 
 /**
  * Fixed corner radius for 8x8 matrix buttons, in px.
  * @type {number}
  * @const
  */
-Blockly.FieldMatrix8.MATRIX_NODE_RADIUS = 3;
+Blockly.FieldMatrix8.MATRIX_NODE_RADIUS = 4;
 
 /**
  * Fixed padding for 8x8 matrix buttons, in px.
@@ -206,6 +204,13 @@ Blockly.FieldMatrix8.prototype.init = function() {
   if (this.fieldGroup_) {
     // Matrix menu has already been initialized once.
     return;
+  }
+
+  // Change the color to parent block color.
+  if (this.sourceBlock_.getParent()) {
+    var parentBlock = this.sourceBlock_.getParent();
+    this.sourceBlock_.setColour(parentBlock.getColour(), parentBlock.getColourSecondary(),
+        parentBlock.getColourTertiary());
   }
 
   // Build the DOM.

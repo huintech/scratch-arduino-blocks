@@ -128,8 +128,6 @@ goog.inherits(Blockly.FieldMatrix, Blockly.Field);
  * @nocollapse
  */
 Blockly.FieldMatrix.fromJson = function(options) {
-  // TODO: 추후 삭제
-  console.log(options);
   return new Blockly.FieldMatrix(options['matrix']);
 };
 
