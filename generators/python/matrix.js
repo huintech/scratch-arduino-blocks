@@ -31,3 +31,12 @@ Blockly.Python['matrix'] = function(block) {
   }
   return [code, Blockly.Python.ORDER_ATOMIC];
 };
+
+Blockly.Python['matrix8'] = function(block) {
+  // Numeric value.
+  var code = block.getFieldValue('MATRIX8');
+  if (isNaN(code)) {
+    code = 0;
+  }
+  return [code, Blockly.Python.ORDER_ATOMIC];
+};

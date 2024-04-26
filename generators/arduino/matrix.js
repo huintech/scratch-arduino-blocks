@@ -31,3 +31,12 @@ Blockly.Arduino['matrix'] = function(block) {
   }
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
+
+Blockly.Arduino['matrix8'] = function(block) {
+  // Numeric value.
+  var code = block.getFieldValue('MATRIX8');
+  if (isNaN(code)) {
+    code = 0;
+  }
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
